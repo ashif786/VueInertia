@@ -11,9 +11,9 @@
             </thead>
             <tbody>
                 <tr v-for="user in posts" :key="user.id">
-                    <td  class='border'>{{user.id}} </td>
-                    <td  class='border'>{{user.name}} </td>
-                    <td  class='border'>{{user.email}} </td>
+                    <td class='border'>{{user.id}} </td>
+                    <td class='border'>{{user.name}} </td>
+                    <td class='border'>{{user.email}} </td>
                    
                      
                 </tr>
