@@ -17,3 +17,4 @@ use App\Http\Controllers\PostController;
 
 Route::get('/' , [PostController::class, 'index']);
 Route::inertia('contact', 'Contact');
+Route::get('test',  [PostController::class, 'test']);

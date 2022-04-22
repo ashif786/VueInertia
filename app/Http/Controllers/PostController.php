@@ -14,4 +14,8 @@ class PostController extends Controller
         $posts = Post::select(['id','name','email'])->get();
         return inertia('Index', compact('posts'));
     }
+    public function test()
+    {
+        dd();
+    }
 }
