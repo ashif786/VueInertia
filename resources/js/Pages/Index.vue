@@ -1,7 +1,7 @@
 <template>
 
          <div class="flex gap-x-1">
-          <Link href="/">Link</Link>     &nbsp;     
+          <Link href="/">Link</Link>         
           <Link href="/contact">Contact</Link>
           </div>
 
