@@ -1,9 +1,7 @@
 <template>
 
-         <div class="flex gap-x-1">
-          <Link href="/">Link</Link>         
-          <Link href="/contact">Contact</Link>
-          </div>
+     <AppLayout>
+         
 
 <div class='container mx-auto w-1/2 bg-blue-200 p-4 rounded mt-4'>  
  <table class="table w-full">
@@ -26,17 +24,19 @@
             </tbody>
         </table>
 </div>
+     </AppLayout>
+
 </template>
 
 <script>
 
+import AppLayout from "../layouts/app";
 
-import {Link} from "@inertiajs/inertia-vue3";
 export default {
-    components:
+     components:
     {
-        Link
-    },
+        AppLayout
+    }, 
     props:
     {
         posts:Object

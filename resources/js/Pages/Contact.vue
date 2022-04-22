@@ -1,18 +1,21 @@
 <template>
-     <div class="flex gap-x-1">
-          <Link href="/">Link</Link>     
-          <Link href="/contact">Contact</Link>
-          </div>
-           
-Contact Me
+     <AppLayout>
+     <div class='container mx-auto w-1/2 bg-blue-200 p-4 rounded mt-4'>  
+
+        Contact Me
+
+     </div>
+                    
+     </AppLayout>
+
 </template>
 
 <script>
-import {Link} from "@inertiajs/inertia-vue3";
+import AppLayout from "../layouts/app";
 export default {
     components:
     {
-        Link
+        AppLayout
     }, 
 }
 </script>
