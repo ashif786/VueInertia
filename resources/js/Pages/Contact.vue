@@ -5,13 +5,16 @@
      <div class='container mx-auto w-1/2 bg-blue-200 p-4 rounded mt-4'>  
 
         Contact Me
+        <!-- with name of the path -->
           <Link href="test">
         <button class="bg-red-400 rounded text-white p-1">clickMe</button>
           </Link> 
-
-          <!-- <Link :href="route('test')">
+        <!-- with the route name -->
+          <Link :href="route('test')">
         <button class="bg-red-400 rounded text-white p-1">clickMe</button>
-          </Link>      -->
+          </Link>     
+
+          
 
 
 

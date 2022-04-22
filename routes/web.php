@@ -15,6 +15,6 @@ use App\Http\Controllers\PostController;
 */
  
 
-Route::get('/' , [PostController::class, 'index']);
-Route::inertia('contact', 'Contact');
-Route::get('test',  [PostController::class, 'test']);
+Route::get('/' , [PostController::class, 'index'])->name('posts');
+Route::inertia('contact', 'Contact')->name('contact');
+Route::get('test',  [PostController::class, 'test'])->name('test');
