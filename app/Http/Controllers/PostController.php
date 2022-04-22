@@ -16,6 +16,6 @@ class PostController extends Controller
     }
     public function test()
     {
-        dd();
+        dd(123);
     }
 }
