@@ -1,4 +1,10 @@
 <template>
+
+         <div class="flex gap-x-1">
+          <Link href="/">Link</Link>     &nbsp;     
+          <Link href="/contact">Contact</Link>
+          </div>
+
 <div class='container mx-auto w-1/2 bg-blue-200 p-4 rounded mt-4'>  
  <table class="table w-full">
             <thead>
@@ -23,7 +29,12 @@
 </template>
 
 <script>
+import {Link} from "@inertiajs/inertia-vue3";
 export default {
+    components:
+    {
+        Link
+    },
     props:
     {
         posts:Object
