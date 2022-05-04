@@ -3,12 +3,17 @@
      <AppLayout>        
 
         <div class='container mx-auto w-1/2 bg-blue-200 p-4 rounded mt-4'>  
+        <Link :href="route('posts.create')">
+        <button class="bg-gray-800 rounded text-white p-1 mb-4">Add Record</button>
+        </Link>     
+
         <table class="table w-full">
                     <thead>
                         <tr class='border'>
                             <th class='border'>Id#</th>
                             <th class='border'>Name</th>
                             <th class='border'>Email</th>
+                            <th class='border'>Actions</th>
                             
                         </tr>
                     </thead>
@@ -17,6 +22,9 @@
                             <td class='border'>{{user.id}} </td>
                             <td class='border'>{{user.name}} </td>
                             <td class='border'>{{user.email}} </td>
+                            <td class='border'>
+                                <button class="bg-red-600 text-white rounded p-1" @click="destroy(user.id)" type="button">Delete</button>
+                            </td>
                         
                             
                         </tr>
@@ -30,16 +38,31 @@
 <script>
 
 import AppLayout from "../layouts/app";
-import { Head } from "@inertiajs/inertia-vue3";
+import { Head, Link } from "@inertiajs/inertia-vue3";
+import {Inertia} from "@inertiajs/inertia";
 
 export default {
      components:
     {
-        AppLayout, Head
+        AppLayout, Head, Link
     }, 
+  
     props:
     {
         posts:Object
+    },
+      setup()
+    {
+        const destroy = (id) => {
+
+            if(confirm('are you sure?'))
+            {
+                Inertia.delete(route('posts.destroy', id))
+            }
+
+        }
+            return {destroy}
+
     }
 }
 </script>
