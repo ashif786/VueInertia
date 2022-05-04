@@ -12,7 +12,10 @@ class PostController extends Controller
     {
         //sleep(3);
         $posts = Post::select(['id','name','email'])->get();
-        return inertia('Index', compact('posts'));
+        return inertia('Index', 
+        ['posts' => $posts] 
+        //compact('posts')
+        );
     }
     public function test()
     {
