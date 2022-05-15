@@ -6,7 +6,8 @@
         <Link :href="route('posts.create')">
         <button class="bg-gray-800 rounded text-white p-1 mb-4">Add Record</button>
         </Link>     
-
+    <span> {{ myVar }}</span>
+    <button v-on:click='hellowrl'>click</button>
         <table class="table w-full">
                     <thead>
                         <tr class='border'>
@@ -63,6 +64,18 @@ export default {
         }
             return {destroy}
 
+    },
+   data() {
+        return {
+            myVar: 'ashif',
+        }
+    },
+
+    methods: {
+         hellowrl()
+        {
+            alert('yes');
+        }
     }
 }
 </script>
