@@ -12,12 +12,7 @@
         <!-- with the route name -->
           <Link :href="route('test')">
         <button class="bg-red-400 rounded text-white p-1">clickMe</button>
-          </Link>     
-
-          
-
-
-
+          </Link>   
      </div>
                     
      </AppLayout>
